@@ -1,8 +1,4 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
+import { createStore } from 'redux';
+import { ADD_POST, REMOVE_POST } from './actions/postActions';
 
-render(
-  <App />,
-  document.getElementById('root')
-);
+const initialState = 
