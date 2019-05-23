@@ -1,9 +1,12 @@
-import { combineReducers } from 'redux';
-import posts from './reducers/postReducers';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import App from './components/App';
 
-export default combineReducers({
-  posts
-});
-
-// redundant, placeholder for additional reducer adding in 
-// next-branch version
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
