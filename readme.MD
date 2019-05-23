@@ -1,1 +1,1 @@
-Blog with posts using redux: refactored reducers!
+Blog with posts using redux combined reducers!

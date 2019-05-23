@@ -5,10 +5,13 @@ const initialState = [];
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case ADD_POST:
-      return { ...state, post: action.payload };
-  }
-  switch(action.type) {
+      return [...state, action.payload];
     case REMOVE_POST:
-      return { ...state, post: null };
+      return [
+        ...state.slice(0, action.payload),
+        ...state.slice(action.payload + 1)
+      ];
+    default:
+      return state;
   }
 }

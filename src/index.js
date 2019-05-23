@@ -1,4 +1,9 @@
-import { createStore } from 'redux';
-import { ADD_POST, REMOVE_POST } from './actions/postActions';
+import { combineReducers } from 'redux';
+import posts from './reducers/postReducers';
 
-const initialState = 
+export default combineReducers({
+  posts
+});
+
+// redundant, placeholder for additional reducer adding in 
+// next-branch version
