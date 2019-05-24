@@ -10,19 +10,29 @@ describe('post selectors', () => {
     };
 
     expect(getPosts(state)).toEqual([
-      { id: 0, title: 'PostA', body: 'I am A!' },
-      { id: 1, title: 'PostB', body: 'I am B!' }
+      { title: 'PostA', body: 'I am A!' },
+      { title: 'PostB', body: 'I am B!' }
     ]);
   });
 
   it('gets post by index', () => {
     const state = {
       posts: [
-        { title: 'Post1', body: 'I am post 1!' },
-        { title: 'Post2', body: 'I am post 2!' }
+        { title: 'Post1', body: 'I am post 1!' }//,
+        // { title: 'Post2', body: 'I am post 2!' }
       ]
     };
 
-    expect(getPostByIndex(state, 0)).toEqual({ id: 0, title: 'Post1', body: 'I am post 1!' });
+    expect(
+      (
+        (getPostByIndex(state, 0)).toEqual(
+          { id: 0, title: 'Post1', body: 'I am post 1!' }
+        ) 
+        // && 
+        // (getPostByIndex(state, 1)).toEqual(
+        //   { id: 1, title: 'Post2', body: 'I am post 2!' }
+        // )
+      )
+    );
   });
 });

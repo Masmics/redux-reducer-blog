@@ -19,6 +19,7 @@
     "test": "jest --verbose",
     "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
+    "start:watch": "npm run start --watch",
     "build": "webpack -p --devtool source-map"
   },
   "keywords": [],
@@ -27,7 +28,9 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
     "redux": "^4.0.1"
   },
   "devDependencies": {

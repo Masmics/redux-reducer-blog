@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Home from './';
+import Home from './Home';
 import PostById from './PostById';
 
 export default function App() {

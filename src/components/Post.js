@@ -1,0 +1,24 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa';
+
+export default function Post({ post, removePost }) {
+  return (
+    <>
+      <Link to={'/posts/${post.id}'}>{post.title}</Link>
+      <FaTrashAlt onClick={removePost.bind(null, post.id)} />
+    </>
+  );
+}
+
+Post.propTypes = {
+  removePost: PropTypes.func.isRequired,
+  post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string
+  }).isRequired
+};
+
+// create a Post component for lists
+// display a posts title

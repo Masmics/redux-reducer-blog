@@ -18,7 +18,7 @@ describe('comment reducer', () => {
     const newState = reducer(initialState, removeComment(1, 0));
 
     expect(newState).toEqual({
-      1: ['Comment content']
+      1: []
     });
   });
 
