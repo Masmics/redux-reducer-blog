@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
 
 export default function Post({ post, deletePost }) {
-  console.log(post);
   return (
     <>
       <Link to={'/posts/${post.id}'}>{post.title}</Link>
@@ -21,5 +20,3 @@ Post.propTypes = {
   }).isRequired
 };
 
-// create a Post component for lists
-// display a posts title
