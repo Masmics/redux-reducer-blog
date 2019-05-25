@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { addPost } from '../actions/postActions';
+import { createPost } from '../actions/postActions';
 import PostForm from '../components/PostForm';
 
 const mapDispatchToProps = dispatch => ({
   onSubmit(title, body) {
-    dispatch(addPost(title, body));
+    dispatch(createPost(title, body));
   }
 });
 

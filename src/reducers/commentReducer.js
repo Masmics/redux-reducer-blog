@@ -1,5 +1,5 @@
-import { ADD_COMMENT, REMOVE_COMMENT } from '../actions/commentActions';
-import { REMOVE_POST } from '../actions/postActions';
+import { CREATE_COMMENT, DELETE_COMMENT } from '../actions/commentActions';
+import { DELETE_POST } from '../actions/postActions';
 
 const deletePostComments = (state, id) => {
   const newState = { ...state };
@@ -9,7 +9,7 @@ const deletePostComments = (state, id) => {
 
 export default function reducer(state = {}, action) {
   switch(action.type) {
-    case ADD_COMMENT:
+    case CREATE_COMMENT:
       return { 
         ...state, 
         [action.payload.postId]: [
@@ -17,7 +17,7 @@ export default function reducer(state = {}, action) {
           action.payload.comment
         ]
       };
-    case REMOVE_COMMENT:
+    case DELETE_COMMENT:
       return {
         ...state,
         [action.payload.postId]: [
@@ -25,7 +25,7 @@ export default function reducer(state = {}, action) {
           ...state[action.payload.postId].slice(action.payload.commentId + 1),
         ]
       };
-    case REMOVE_POST:
+    case DELETE_POST:
       return deletePostComments(state, action.payload);
     default:
       return state;

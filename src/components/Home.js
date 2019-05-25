@@ -1,12 +1,13 @@
 import React from 'react';
 import CreatePost from '../containers/CreatePost';
 import AllPosts from '../containers/AllPosts';
+import styles from './Home.css';
 
 export default function Home() {
   return (
     <>
       <h1>Posts</h1>
-      <section>
+      <section className={styles.CreatePost}>
         <h2>Create Post</h2>
         <CreatePost />
       </section>
